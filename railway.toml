@@ -1,0 +1,10 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "python main.py"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
+
+# Для сохранения данных между перезапусками добавьте Volume в Railway
+# с mount path /app/data и переменную DATA_DIR=/app/data
